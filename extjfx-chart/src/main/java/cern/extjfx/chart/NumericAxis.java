@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.sun.javafx.css.converters.SizeConverter;
+import javafx.css.converter.SizeConverter;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.DoubleProperty;

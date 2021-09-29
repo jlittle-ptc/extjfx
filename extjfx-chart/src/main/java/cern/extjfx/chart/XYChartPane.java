@@ -18,8 +18,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-import com.sun.javafx.css.converters.BooleanConverter;
-import com.sun.javafx.css.converters.EnumConverter;
+import javafx.css.converter.BooleanConverter;
+import javafx.css.converter.EnumConverter;
 
 import cern.extjfx.chart.plugins.Panner;
 import cern.extjfx.chart.plugins.Zoomer;
@@ -52,6 +52,7 @@ import javafx.scene.Parent;
 import javafx.scene.chart.Axis;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.Chart;
+import javafx.scene.chart.ValueAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.chart.XYChart.Data;
 import javafx.scene.chart.XYChart.Series;
@@ -287,6 +288,10 @@ public class XYChartPane<X, Y> extends Region {
         }
     }
 
+    public ValueAxis<Number> getXAxis() {
+    	return (ValueAxis<Number>) baseChart.getXAxis();
+    }
+    
     @Override
     protected void layoutChildren() {
         layoutOngoing = true;
